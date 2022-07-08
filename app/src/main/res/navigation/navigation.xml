@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/home">
+
+    <fragment
+        android:id="@+id/home"
+        android:name="com.example.quiz.fragment.Home"
+        android:label="Android Trivia"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_home_to_game"
+            app:destination="@id/game" />
+    </fragment>
+    <fragment
+        android:id="@+id/game"
+        android:name="com.example.quiz.fragment.Game"
+        android:label="Android Trivia"
+        tools:layout="@layout/fragment_game">
+        <action
+            android:id="@+id/action_game_to_passedGame"
+            app:destination="@id/passedGame" />
+    </fragment>
+    <fragment
+        android:id="@+id/passedGame"
+        android:name="com.example.quiz.fragment.PassedGame"
+        android:label="Android Trivia"
+        tools:layout="@layout/fragment_passed_game">
+        <action
+            android:id="@+id/action_passedGame_to_game"
+            app:destination="@id/game" />
+    </fragment>
+</navigation>
