@@ -12,7 +12,8 @@
         tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_home_to_game"
-            app:destination="@id/game" />
+            app:destination="@id/game"
+            app:enterAnim="@android:anim/slide_in_left" />
     </fragment>
     <fragment
         android:id="@+id/game"
@@ -21,7 +22,8 @@
         tools:layout="@layout/fragment_game">
         <action
             android:id="@+id/action_game_to_passedGame"
-            app:destination="@id/passedGame" />
+            app:destination="@id/passedGame"
+            app:enterAnim="@android:anim/slide_in_left" />
     </fragment>
     <fragment
         android:id="@+id/passedGame"
@@ -30,7 +32,8 @@
         tools:layout="@layout/fragment_passed_game">
         <action
             android:id="@+id/action_passedGame_to_game"
-            app:destination="@id/game" />
+            app:destination="@id/game"
+            app:enterAnim="@android:anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/about"
