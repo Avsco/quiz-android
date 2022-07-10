@@ -31,6 +31,7 @@ class PassedGame : Fragment(R.layout.fragment_passed_game) {
         if(viewModel.score.value?.equals(viewModel.maxScore) == false){
             binding.textGame.text = "Try Again"
             binding.restartGame.text= "Try Again?"
+            binding.layoutPassedGame.setBackgroundResource(R.color.red)
         }
 
         binding.restartGame.setOnClickListener { view: View ->

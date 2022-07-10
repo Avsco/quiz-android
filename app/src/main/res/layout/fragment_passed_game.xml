@@ -7,11 +7,12 @@
     </data>
 
     <LinearLayout
+        android:id="@+id/layoutPassedGame"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
         android:orientation="vertical"
-        tools:context=".fragment.Home">
+        android:background="#87FF55">
 
         <TextView
             android:id="@+id/textGame"
