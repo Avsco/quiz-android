@@ -1,7 +1,6 @@
 package com.example.quiz.fragment
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -31,13 +30,15 @@ class Game : Fragment(R.layout.fragment_game) {
         viewModel.currentQuestion.observe(viewLifecycleOwner, Observer { question ->
             binding.radioGroup.clearCheck()
             binding.title.text = question.question
-            binding.first.text = question.answer[0].answer
-            binding.second.text = question.answer[1].answer
-            binding.third.text = question.answer[2].answer
-            binding.fourth.text = question.answer[3].answer
+            val values = arrayOf(0, 1, 2, 3).toMutableList()
+            values.shuffle()
+            binding.first.text = question.answer[values.removeFirst()].answer
+            binding.second.text = question.answer[values.removeFirst()].answer
+            binding.third.text = question.answer[values.removeFirst()].answer
+            binding.fourth.text = question.answer[values.removeFirst()].answer
         })
 
-        binding.submit.setOnClickListener { view : View ->
+        binding.submit.setOnClickListener { view: View ->
             val checkedRadioId = binding.radioGroup.checkedRadioButtonId
             if (checkedRadioId > 0) {
                 this.onClickSubmit(view, checkedRadioId)
@@ -48,7 +49,7 @@ class Game : Fragment(R.layout.fragment_game) {
     }
 
     private fun onClickSubmit(view: View, checkedRadioId: Int) {
-        val checkedRadio = view?.findViewById<RadioButton>(checkedRadioId)
+        val checkedRadio = view.findViewById<RadioButton>(checkedRadioId)
         val viewCheckRadio = viewModel.currentQuestion.value?.answer?.find {
             it.answer == checkedRadio?.text
         }
