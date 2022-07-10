@@ -5,7 +5,13 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
+    android:background="@color/green"
     tools:context=".fragment.Home">
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_launcher_foreground" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -19,5 +25,5 @@
         android:id="@+id/startGame"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Start to play" />
+        android:text="Start to play"
 </LinearLayout>
