@@ -10,39 +10,39 @@ class GameViewModel : ViewModel() {
     private val questions = (
             arrayOf(
                 Question(
-                    "First question",
+                    "What isn't an activity",
                     arrayOf(
-                        Answer("First answer", true),
-                        Answer("second answer", true),
-                        Answer("third answer", false),
-                        Answer("fourth answer", true)
+                        Answer("It's what I do when I go to the gym", true),
+                        Answer("Javascript framework", true),
+                        Answer("It's a view abstraction", false),
+                        Answer("It's an android component", true)
                     )
                 ),
                 Question(
-                    "Second question",
+                    "What is a liveData",
                     arrayOf(
-                        Answer("First answer", true),
-                        Answer("second answer", true),
-                        Answer("third answer", false),
-                        Answer("fourth answer", true)
+                        Answer("It's data that never changes", true),
+                        Answer("It is the response of a server", true),
+                        Answer("It is an observable container", false),
+                        Answer("It is a design pattern", true)
                     )
                 ),
                 Question(
-                    "Third question",
+                    "Which is not a layout component in android",
                     arrayOf(
-                        Answer("First answer", false),
-                        Answer("second answer", true),
-                        Answer("third answer", true),
-                        Answer("fourth answer", true)
+                        Answer("JsonLayout", false),
+                        Answer("LinearLayout", true),
+                        Answer("ConstraintLayout", true),
+                        Answer("GridLayout", true)
                     )
                 ),
                 Question(
-                    "Fourth question",
+                    "Which is not a layout component in android",
                     arrayOf(
-                        Answer("First answer", true),
-                        Answer("second answer", true),
-                        Answer("third answer", true),
-                        Answer("fourth answer", false)
+                        Answer("onStop", true),
+                        Answer("onPause", true),
+                        Answer("onResume", true),
+                        Answer("onUpdate", false)
                     )
                 ),
             )
