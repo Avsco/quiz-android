@@ -3,9 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/green"
     android:gravity="center"
     android:orientation="vertical"
-    android:background="@color/green"
     tools:context=".fragment.Home">
 
     <ImageView
@@ -16,14 +16,14 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
         android:gravity="center_horizontal"
         android:text="Quiz App"
-        android:textSize="48sp"
-        android:layout_marginBottom="30dp"/>
+        android:textSize="48sp" />
 
     <Button
         android:id="@+id/startGame"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Start to play"
+        android:text="Start to play" />
 </LinearLayout>

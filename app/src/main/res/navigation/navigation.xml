@@ -32,4 +32,8 @@
             android:id="@+id/action_passedGame_to_game"
             app:destination="@id/game" />
     </fragment>
+    <fragment
+        android:id="@+id/about"
+        android:name="com.example.quiz.fragment.About"
+        android:label="About" />
 </navigation>
