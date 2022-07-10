@@ -29,12 +29,7 @@
         android:id="@+id/passedGame"
         android:name="com.example.quiz.fragment.PassedGame"
         android:label="Android Trivia"
-        tools:layout="@layout/fragment_passed_game">
-        <action
-            android:id="@+id/action_passedGame_to_game"
-            app:destination="@id/game"
-            app:enterAnim="@android:anim/slide_out_right" />
-    </fragment>
+        tools:layout="@layout/fragment_passed_game"/>
     <fragment
         android:id="@+id/about"
         android:name="com.example.quiz.fragment.About"
