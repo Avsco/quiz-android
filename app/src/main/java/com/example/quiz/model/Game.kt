@@ -1,6 +1,5 @@
 package com.example.quiz.model
 
-import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.quiz.data.Answer
@@ -61,7 +60,7 @@ class GameViewModel : ViewModel() {
         return currentQuestion.value?.equals(questions.last())
     }
 
-    fun restartGame(){
+    fun restartGame() {
         indexCurrentQuestion = 0
         score.value = 0
         currentQuestion.value = questions[indexCurrentQuestion]
