@@ -15,7 +15,7 @@ import com.example.quiz.interfaces.OnBackPressed
 import com.example.quiz.model.GameViewModel
 
 
-class PassedGame : Fragment(R.layout.fragment_passed_game), OnBackPressed {
+class PassedGame : Fragment(R.layout.fragment_passed_game) {
     private lateinit var binding: FragmentPassedGameBinding
 
     private val viewModel: GameViewModel by activityViewModels()
@@ -34,14 +34,9 @@ class PassedGame : Fragment(R.layout.fragment_passed_game), OnBackPressed {
 
         binding.restartGame.setOnClickListener { view: View ->
             viewModel.restartGame()
-            Navigation.findNavController(view).popBackStack()
+            Navigation.findNavController(view).navigate(R.id.action_passedGame_to_game)
         }
 
         return binding.root
-    }
-
-    override fun onBackPressed(): Boolean {
-        viewModel.restartGame()
-        return false
     }
 }

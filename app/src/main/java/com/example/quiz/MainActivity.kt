@@ -22,14 +22,4 @@ class MainActivity : AppCompatActivity() {
     override fun onSupportNavigateUp(): Boolean {
         return findNavController(R.id.myNavHostFragment).navigateUp() || super.onSupportNavigateUp()
     }
-
-
-    override fun onBackPressed() {
-        val fragment =
-            this.supportFragmentManager.findFragmentById(R.id.myNavHostFragment)
-        (fragment as? OnBackPressed)?.onBackPressed()?.not()?.let {
-            super.onBackPressed()
-        }
-    }
-
 }

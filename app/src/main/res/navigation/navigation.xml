@@ -29,7 +29,13 @@
         android:id="@+id/passedGame"
         android:name="com.example.quiz.fragment.PassedGame"
         android:label="Android Trivia"
-        tools:layout="@layout/fragment_passed_game"/>
+        tools:layout="@layout/fragment_passed_game">
+        <action
+            android:id="@+id/action_passedGame_to_game"
+            app:destination="@id/game"
+            app:popUpTo="@id/game"
+            app:popUpToInclusive="true" />
+    </fragment>
     <fragment
         android:id="@+id/about"
         android:name="com.example.quiz.fragment.About"
