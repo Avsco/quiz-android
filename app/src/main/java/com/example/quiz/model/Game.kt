@@ -37,7 +37,7 @@ class GameViewModel : ViewModel() {
                     )
                 ),
                 Question(
-                    "Which is not a layout component in android",
+                    "Which is not a lifecycle method in android",
                     arrayOf(
                         Answer("onStop", true),
                         Answer("onPause", true),
